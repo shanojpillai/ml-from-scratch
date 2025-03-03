@@ -1,9 +1,13 @@
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
+# Get the absolute path of the dataset
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Go up one level
+file_path = os.path.join(base_dir, "data", "breast_cancer.csv")
+
 # Load dataset
-file_path = "../data/breast_cancer.csv"  # Adjust path if necessary
 dataset = pd.read_csv(file_path)
 
 # Drop unnecessary columns
@@ -19,9 +23,9 @@ X_train_std = sc.fit_transform(X_train)
 X_test_std = sc.transform(X_test)
 
 # Save processed data
-pd.DataFrame(X_train_std).to_csv("../data/X_train_std.csv", index=False)
-pd.DataFrame(X_test_std).to_csv("../data/X_test_std.csv", index=False)
-pd.DataFrame(y_train).to_csv("../data/y_train.csv", index=False)
-pd.DataFrame(y_test).to_csv("../data/y_test.csv", index=False)
+pd.DataFrame(X_train_std).to_csv(os.path.join(base_dir, "data", "X_train_std.csv"), index=False)
+pd.DataFrame(X_test_std).to_csv(os.path.join(base_dir, "data", "X_test_std.csv"), index=False)
+pd.DataFrame(y_train).to_csv(os.path.join(base_dir, "data", "y_train.csv"), index=False)
+pd.DataFrame(y_test).to_csv(os.path.join(base_dir, "data", "y_test.csv"), index=False)
 
 print("✅ Dataset processed and saved!")

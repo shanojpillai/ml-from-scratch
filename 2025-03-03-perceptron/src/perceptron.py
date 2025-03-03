@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 class Perceptron:
     def __init__(self, learning_rate=0.01, n_iterations=50):
@@ -27,4 +26,3 @@ class Perceptron:
     def predict(self, X):
         """ Apply step function """
         return np.where(self.net_input(X) >= 0, 1, -1)
-
