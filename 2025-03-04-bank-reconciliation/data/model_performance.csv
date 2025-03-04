@@ -1,0 +1,5 @@
+Model,Accuracy,Precision,Recall,F1-Score
+Logistic Regression,0.9997,0.9824561403508771,0.9655172413793104,0.9739130434782609
+Random Forest,1.0,1.0,1.0,1.0
+Gradient Boosting,1.0,1.0,1.0,1.0
+Support Vector Machine,0.9999,0.9830508474576272,1.0,0.9914529914529915

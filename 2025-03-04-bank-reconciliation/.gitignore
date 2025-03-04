@@ -1,0 +1,6 @@
+# Ignore large generated files
+data/reconciled_pairs.csv
+data/bank_records.csv
+data/internal_records.csv
+models/bank_reconciliation_model.pkl
+*.pkl
