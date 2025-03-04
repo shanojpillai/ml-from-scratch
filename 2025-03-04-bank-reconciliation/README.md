@@ -1,4 +1,7 @@
 ### Key Points
+
+![alt text](image.png)
+
 - It seems likely that the Bank Reconciliation ML Project uses Machine Learning to automate fraud detection in banking transactions, focusing on the synthetic BankSim dataset.
 - Research suggests the project involves data preprocessing, feature engineering, and training models like Random Forest and Gradient Boosting, achieving high accuracy.
 - The evidence leans toward the project being well-structured, with clear steps to set up and run, though the 100% accuracy claims may need validation with real-world data.
